@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    style
+       include ../static/style.css
+  </head>
+  <body>
+    <nav>
+      <ul id="navbar">
+        <li><a href="/">home</a></li>
+        <li><a href="/register">register</a></li>
+        <li><a href="/login">log in</a></li>
+      </ul>
+
+      <div id="logo">
+        <img src="logo.jpg" alt="logo.." />
+      </div>
+    </nav>
+    <div id="form">
+   
+      <form action="/register" method="post">
+        <h1>registration form</h1>
+        <input type="text" name="name" id="name" placeholder="Enter Name*" />
+        <input type="number" name="mno" id="mno" placeholder="Enter Mobile_No*" />
+        <input type="email" name="mail" id="mail" placeholder="Enter Mail*" />
+        <input type="number" name="age" id="age" placeholder="Enter Your Age*">
+        <input type="number" name="std" id="std" placeholder="Enter Your Std*">
+        <div id="btns">
+
+          <input class="btn" id="btn1" type="submit" value="submit" />
+          <input class="btn" id="btn2" type="reset" value="reset now">
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <h1>all rights reserved&copy;</h1>
+    </footer>
+  </body>
+</html>

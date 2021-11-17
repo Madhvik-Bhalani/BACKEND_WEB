@@ -1,0 +1,18 @@
+{
+  "name": "backend-web",
+  "version": "1.0.0",
+  "description": "backend website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "madhvik-bhalani",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "mongoose-unique-validator": "^3.0.0",
+    "pug": "^3.0.2",
+    "validator": "^13.7.0"
+  }
+}
