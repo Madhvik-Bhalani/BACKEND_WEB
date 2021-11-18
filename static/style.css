@@ -142,7 +142,7 @@ footer {
 
 /****/
 #form {
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: rgb(234 248 254);
   padding: 25px;
 }
@@ -154,7 +154,7 @@ form {
   align-items: center;
   justify-content: center;
 }
-input{
+input {
   width: 700px;
   margin-top: 11px;
   /* border: 2px solid red; */
@@ -162,19 +162,29 @@ input{
   text-align: center;
   font-size: 18px;
   padding: 12px;
- 
 }
-#form #btn1{
-    background-color: rgb(250, 85, 85);
+#form #btn1 {
+  background-color: #ff0000;
 }
-#form #btn2{
-    background-color: rgb(94, 248, 94);
+#form #btn2 {
+  background-color: #00ff00;
 }
-form h1{
-  font-size:45px;
+form h1 {
+  font-size: 45px;
   font-weight: bolder;
   text-transform: capitalize;
-  color:darkviolet;
+  color: darkviolet;
 
-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
+
+#passdiv {
+  width: 700px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#pass,
+#cpass {
+  width: 310px;
+}
+/***/

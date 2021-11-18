@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     style
-         include ../static/style.css
+      include ../static/style.css
+   
+
   </head>
   <body>
     <nav>
@@ -20,7 +22,18 @@
         <img src="logo.jpg" alt="logo.." />
       </div>
     </nav>
-     <footer>
+    <div id="form">
+   
+      <form action="/login" method="post">
+        <h1>log-in form</h1>
+      
+        <input type="email" name="mail" id="mail" placeholder="Enter Mail*" />
+        <input type="password" name="pass" id="pass" placeholder="Enter PassWord">
+        <input class="btn" id="btn2" type="submit" value="log in">
+        
+      </form>
+    </div>
+      <footer>
         <h1>all rights reserved&copy; </h1>
     </footer>
   </body>

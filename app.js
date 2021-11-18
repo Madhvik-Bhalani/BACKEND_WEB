@@ -1,10 +1,8 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const mongoose = require('mongoose')
-const exp = require('constants')
 require('./conn')
-const model=require('./scm-model')
+const model = require('./scm-model')
 
 // set view engine
 app.set('view engine', 'pug')
@@ -17,7 +15,8 @@ spath = path.join(__dirname, 'static')
 app.use(express.static(spath))
 
 //for json obj of form
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
 
 app.get("/", (req, res) => {
@@ -32,17 +31,46 @@ app.get("/login", (req, res) => {
     res.render('login')
 })
 
-app.post("/register",async(req,res)=>{
+app.post("/login", async (req, res) => {
     try {
-        res.statusCode=201
-        const data=new model(req.body)
-        const op=await data.save()
-        // res.send(op)
-        res.render('index')
-    } catch (e) {
-        res.statusCode=400;
-        res.send(e)
+        const mail = req.body.mail
+        const pass = parseInt(req.body.pass)
+        const data = await model.findOne({ mail })
+        //find one thi direct onj male find thi array of obj male
+    
         
+        if(data.pass===pass){
+            res.render('index')
+        }
+        else{
+            res.send('invalid pass(log in)')
+        }
+
+
+    } catch (e) {
+        res.send('invalid log in details')
+
+    }
+})
+
+app.post("/register", async (req, res) => {
+    try {
+        const pass = req.body.pass
+        const cpass = req.body.cpass
+        if (pass === cpass) {
+            res.statusCode = 201
+            const data = new model(req.body)
+            const op = await data.save()
+            // res.send(op)
+            res.render('index')
+
+        } else {
+            res.render('back')
+        }
+    } catch (e) {
+        res.statusCode = 400;
+        res.send(e)
+
     }
 })
 

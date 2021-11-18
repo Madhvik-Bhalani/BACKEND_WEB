@@ -1,0 +1,12 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  
+h1 password does not match 
+input#back(type='button' value='Go Back')
+script.
+  const back=document.getElementById('back')
+  back.addEventListener('click',()=>{window.history.back()})

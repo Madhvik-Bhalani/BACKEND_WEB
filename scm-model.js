@@ -21,22 +21,34 @@ const scm = new mongoose.Schema({
         unique: true,
         required: true,
         validate(val) {
-            if (! validator.isEmail(val)) {
+            if (!validator.isEmail(val)) {
                 throw new Error('invalid email')
             }
-        },
-        age: {
-            type: Number,
-            required: true
-        },
-        std: {
-            type: Number,
-            required: true
-
         }
 
-
+    },
+    age: {
+        type: Number,
+        required: true
+    },
+    std: {
+        type: Number,
+        required: true
+        
+    },
+    pass:{
+        
+        type: Number,
+        required: true,
+        unique:true
+    },
+    cpass:{
+        
+        type: Number,
+        required: true,
+        unique:true
     }
+
 })
 
 scm.plugin(unival) //plug in for scm
